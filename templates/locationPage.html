@@ -17,8 +17,10 @@
 
   
 {% block body %}
+
 <div class="container pt-4">
-  <div class="row">
+  <h2>Select the Cordinates</h2>
+  <div class="row pt-2 .addTo">
   <div class="col-md-5"id="map"></div>
 <form method="post" action="weather" class="col-md-6">
   {% csrf_token %}
