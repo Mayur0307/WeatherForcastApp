@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block head %}{% endblock head %}
+{% block style %}
+.weather-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card .card-title {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+}
+
+.weather-card .card-text {
+    font-size: 18px;
+    margin-bottom: 0.25rem;
+}
+
+.error-message {
+    font-size: 18px;
+    margin-top: 1rem;
+}
+{% endblock style %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            {% if weather_data %}
+            <h1 class="card-title">Weather Information</h1>
+                <div class="card weather-card">
+                    <div class="card-body">
+                        <p class="card-text"><b>City:</b> {{ weather_data.city }},{{weather_data.country}}</p>
+                        <p class="card-text"><b>Temperature:</b> {{ weather_data.temperature }}°C</p>
+                        {% if weather_data.feels_like %}
+                            <p class="card-text"><b>Feels Like:</b> {{ weather_data.feels_like }}°C</p>
+                        {% endif %}
+                        <p class="card-text"><b>Minimum Temperature: </b>{{ weather_data.temp_min }}°C</p>
+                        <p class="card-text"><b>Maximum Temperature: </b>{{ weather_data.temp_max }}°C</p>
+                        <p class="card-text"><b>Pressure: </b>{{ weather_data.pressure }} hPa</p>
+                        <p class="card-text"><b>Humidity: </b>{{ weather_data.humidity }}%</p>
+                        <p class="card-text"><b>Wind Speed: </b>{{ weather_data.wind_speed }} m/s</p>
+                        <p class="card-text"><b>Wind Direction: </b>{{ weather_data.wind_deg }}°</p>
+                        <p class="card-text"><b>Cloud Cover: </b>{{ weather_data.clouds_all }}%</p>
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if error_message %}
+                <div class="alert alert-danger error-message" role="alert">{{ error_message }}</div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock body %}
+
+{% block scripts %}{% endblock scripts %}

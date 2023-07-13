@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./style.css">
+
+  {% block head %}{% endblock head %}
   <title>WeatherForecaster</title>
   <style>
     
@@ -78,10 +79,8 @@
       top: 0;
     }
     .footer{
+      margin-top:100%;
       background-color: #333;
-    }
-    p{
-      color: #fff;
     }
     {% block style %}{% endblock style %}
   </style>
@@ -99,13 +98,10 @@
             <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#get-started">Get Started</a>
+            <a class="nav-link" href="/#get-started">Get Started</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#features">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="/#features">Features</a>
           </li>
         </ul>
       </div>
@@ -114,10 +110,10 @@
   {% block body  %}
   {% endblock body  %}
 
-  <footer class="footer text-center py-3 mb-0">
+  {% comment %} <footer class="footer text-center py-3 mb-0 fixed-bottom">
     <p>Made with 	&#10084; by Mayur Gupta.</p>
-  </footer>
-
+  </footer> {% endcomment %}
+{% block scripts %}{% endblock scripts %}
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
