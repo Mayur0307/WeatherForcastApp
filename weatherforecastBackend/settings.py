@@ -76,8 +76,13 @@ WSGI_APPLICATION = 'weatherforecastBackend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'URL': 'postgresql://postgres:QMgB1eZyxJtcDwfbHSZx@containers-us-west-43.railway.app:7755/railway',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'QMgB1eZyxJtcDwfbHSZx',
+        'HOST': 'containers-us-west-43.railway.app',
+        'PORT': 7755,
     }
 }
 
