@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block style %}
+header {
+  background-color: #338dc4;
+  padding: 4rem 0;
+  text-align: center;
+}
+header h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+header p {
+  font-size: 1.5rem;
+  color: #f8f9fa;
+}
+#features ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+#features li {
+  margin-bottom: 0.5rem;
+}
+#get-started a {
+  font-size: 1.2rem;
+}
+{% endblock style %}
+
+
+{% block body %}
+<header>
+  <h1 class="display-3">Welcome to Weather Forecasting</h1>
+  <p class="lead">Get accurate and up-to-date weather information for any location.</p>
+</header>
+
+<main class="container my-5">
+  <section id="get-started">
+    <h2 class="mb-3 ">Get Started</h2>
+    <p>Start exploring the weather in your area:</p>
+    <a href="/weather" class="btn btn-primary">Check Weather</a>
+  </section>
+
+  <hr>
+  
+  <section id="features">
+    <h2 class="mb-4 pt-3">Features</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Real-time weather updates</li>
+      <li class="list-group-item">Hourly and daily forecasts</li>
+      <li class="list-group-item">Weather radar and maps</li>
+      <li class="list-group-item">Severe weather alerts</li>
+      <li class="list-group-item">Customizable location search</li>
+      <li class="list-group-item">Interactive charts and graphs</li>
+    </ul>
+  </section>
+</main>
+{% endblock body %}
