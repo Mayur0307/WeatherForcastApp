@@ -34,15 +34,15 @@
                         <p class="card-text"><b>City:</b> {{ weather_data.city }},{{weather_data.country}}</p>
                         <p class="card-text"><b>Temperature:</b> {{ weather_data.temperature }}°F</p>
                         {% if weather_data.feels_like %}
-                            <p class="card-text"><b>Feels Like:</b> {{ weather_data.feels_like }}°F</p>
+                            <p class="card-text"><b>Feels Like:</b> {{ weather_data.feelslike }}°F</p>
                         {% endif %}
-                        <p class="card-text"><b>Minimum Temperature: </b>{{ weather_data.temp_min }}°F</p>
-                        <p class="card-text"><b>Maximum Temperature: </b>{{ weather_data.temp_max }}°F</p>
+                        <p class="card-text"><b>Minimum Temperature: </b>{{ weather_data.tempmin }}°F</p>
+                        <p class="card-text"><b>Maximum Temperature: </b>{{ weather_data.tempmax }}°F</p>
                         <p class="card-text"><b>Pressure: </b>{{ weather_data.pressure }} hPa</p>
                         <p class="card-text"><b>Humidity: </b>{{ weather_data.humidity }}%</p>
-                        <p class="card-text"><b>Wind Speed: </b>{{ weather_data.wind_speed }} m/s</p>
-                        <p class="card-text"><b>Wind Direction: </b>{{ weather_data.wind_deg }}°</p>
-                        <p class="card-text"><b>Cloud Cover: </b>{{ weather_data.clouds_all }}%</p>
+                        <p class="card-text"><b>Wind Speed: </b>{{ weather_data.windspeed }} m/s</p>
+                        <p class="card-text"><b>Wind Direction: </b>{{ weather_data.winddeg }}°</p>
+                        <p class="card-text"><b>Cloud Cover: </b>{{ weather_data.cloudsall }}%</p>
                     </div>
                 </div>
             {% endif %}
